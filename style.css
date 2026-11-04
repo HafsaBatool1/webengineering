@@ -1,0 +1,215 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5eee6;
+    color: #3e2723;
+    margin: 0;
+}
+
+header {
+    background-color: #3e2723;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 5px 10px;
+}
+
+nav a:hover {
+    color: #d7a86e;
+}
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #6d4c41;
+}
+
+#menu {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#menu h2,
+#menu .filter-buttons,
+#menu #total {
+    width: 100%;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.card {
+    background-color: #f5eee6;
+    padding: 15px;
+    width: 100%;
+    max-width: 250px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.card h3 {
+    color: #6d4c41;
+}
+
+.card p:last-of-type {
+    font-weight: bold;
+    color: #a05a2c;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.alpha-list {
+    list-style-type: upper-alpha;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 400px;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #999;
+    text-align: left;
+}
+
+th {
+    background-color: #6d4c41;
+    color: white;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+}
+
+textarea {
+    min-height: 80px;
+    font-family: Arial, sans-serif;
+}
+
+button {
+    background-color: #6d4c41;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 5px;
+}
+
+button:hover {
+    background-color: #3e2723;
+}
+
+#status {
+    font-weight: bold;
+}
+
+#total {
+    font-weight: bold;
+    color: #a05a2c;
+}
+
+@media (min-width: 600px) {
+    button {
+        width: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        width: 95%;
+        margin: 15px auto;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+}
+
+/* Dark mode */
+body.dark-mode {
+    background-color: #222;
+    color: #eee;
+}
+
+body.dark-mode section {
+    background-color: #333;
+    color: #eee;
+}
+
+body.dark-mode h2,
+body.dark-mode .card h3 {
+    color: #e0b58b;
+}
+
+body.dark-mode .card {
+    background-color: #444;
+    color: #eee;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+    background-color: #444;
+    color: white;
+    border: 1px solid #888;
+}
+
+body.dark-mode table {
+    color: #eee;
+}
+
+body.dark-mode td {
+    border-color: #777;
+}
