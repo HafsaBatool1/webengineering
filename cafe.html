@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Aroma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Café Aroma</h1>
+    <p id="status">Checking opening status...</p>
+    <button id="themeBtn" type="button">Toggle Light/Dark Mode</button>
+
+    <nav>
+        <a href="#menu">Menu</a>
+        <a href="#hours">Hours</a>
+        <a href="#reserve">Reserve</a>
+    </nav>
+</header>
+
+<main>
+    <section id="menu">
+        <h2>Menu</h2>
+
+        <div class="filter-buttons">
+            <button class="filterBtn" data-filter="all" type="button">All</button>
+            <button class="filterBtn" data-filter="drinks" type="button">Drinks</button>
+            <button class="filterBtn" data-filter="pastries" type="button">Pastries</button>
+        </div>
+
+        <article class="card" data-category="drinks">
+            <h3>Flat White</h3>
+            <p>Espresso with steamed milk.</p>
+            <p>Rs. 550</p>
+            <label><input type="checkbox" class="orderItem" value="550"> Add to order</label>
+        </article>
+
+        <article class="card" data-category="drinks">
+            <h3>Iced Caramel Brew</h3>
+            <p>Cold brew with caramel drizzle.</p>
+            <p>Rs. 650</p>
+            <label><input type="checkbox" class="orderItem" value="650"> Add to order</label>
+        </article>
+
+        <article class="card" data-category="pastries">
+            <h3>Almond Croissant</h3>
+            <p>Fresh baked, topped with almonds.</p>
+            <p>Rs. 400</p>
+            <label><input type="checkbox" class="orderItem" value="400"> Add to order</label>
+        </article>
+
+        <p id="total">Total: Rs. 0</p>
+    </section>
+
+    <section>
+        <h2>Menu Table</h2>
+        <p>Move your mouse over a row to highlight it.</p>
+
+        <div class="table-container">
+            <table id="menuTable">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-category="drinks">
+                        <td>Flat White</td>
+                        <td>Drinks</td>
+                        <td>Rs. 550</td>
+                    </tr>
+                    <tr data-category="drinks">
+                        <td>Iced Caramel Brew</td>
+                        <td>Drinks</td>
+                        <td>Rs. 650</td>
+                    </tr>
+                    <tr data-category="pastries">
+                        <td>Almond Croissant</td>
+                        <td>Pastries</td>
+                        <td>Rs. 400</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section>
+        <h2>Café Interior</h2>
+        <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=600"
+             alt="Café interior">
+    </section>
+
+    <section>
+        <h2>How to Order</h2>
+        <ol class="alpha-list" type="A">
+            <li>Choose a drink.</li>
+            <li>Pick a seat.</li>
+            <li>Pay at the counter.</li>
+            <li>Enjoy!</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>About Café Aroma</h2>
+        <article>
+            <p>
+                Café Aroma serves freshly prepared coffee and delicious
+                bakery items in a comfortable environment.
+            </p>
+
+            <p id="extraText" hidden>
+                Our café is a welcoming place to meet friends, relax after
+                a busy day, and enjoy your favorite drinks with freshly
+                baked treats.
+            </p>
+
+            <button id="readBtn" type="button">Read More</button>
+        </article>
+    </section>
+
+    <section id="hours">
+        <h2>Opening Hours</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Open</th>
+                        <th>Close</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Mon–Fri</td><td>8 AM</td><td>10 PM</td></tr>
+                    <tr><td>Saturday</td><td>9 AM</td><td>11 PM</td></tr>
+                    <tr><td>Sunday</td><td>10 AM</td><td>9 PM</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="reserve">
+        <h2>Reserve a Table</h2>
+
+        <form id="reserveForm" action="#" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="birth-year">Birth Year</label>
+            <input type="text" id="birth-year" name="birth-year"
+                   placeholder="e.g. 2002">
+
+            <label for="special-notes">Special Requests</label>
+            <textarea id="special-notes" maxlength="100"></textarea>
+            <p id="charCount">100 characters remaining</p>
+
+            <p>Seating:</p>
+            <label><input type="radio" name="seating" value="indoor" checked> Indoor</label>
+            <label><input type="radio" name="seating" value="outdoor"> Outdoor</label>
+
+            <p>Add-ons:</p>
+            <label><input type="checkbox" name="addon" value="birthday"> Birthday setup</label>
+            <br>
+            <label><input type="checkbox" name="addon" value="newsletter"> Subscribe to newsletter</label>
+
+            <p>
+                <button type="submit">Reserve</button>
+            </p>
+
+            <p id="formMessage"></p>
+            <p id="discountMessage"></p>
+        </form>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
